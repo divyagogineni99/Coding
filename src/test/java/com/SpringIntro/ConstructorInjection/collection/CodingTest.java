@@ -100,6 +100,7 @@ public class CodingTest {
         assertEquals(result,output);
     }
 
+
     @Test
     void binarySearchIterative(){
         int[] binaryArray={1, 2, 3, 4, 5};

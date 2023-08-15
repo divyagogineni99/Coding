@@ -10,5 +10,6 @@ public interface Coding {
 
     String checkIfBalancedupdated(String str);
 
+
     String binarySearchIterative(int[] array, int searchElement);
 }

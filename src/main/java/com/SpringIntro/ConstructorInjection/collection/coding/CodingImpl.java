@@ -44,6 +44,7 @@ public class CodingImpl implements Coding {
     }
 
 
+
     @Override
     public String checkIfBalancedupdated(String str) {
         resultStack.clear();
