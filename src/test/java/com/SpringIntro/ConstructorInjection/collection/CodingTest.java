@@ -100,4 +100,14 @@ public class CodingTest {
         assertEquals(result,output);
     }
 
+
+    @Test
+    void binarySearchIterative(){
+        int[] binaryArray={1, 2, 3, 4, 5};
+        int searchElement= 2;
+        String result = coding.binarySearchIterative(binaryArray,searchElement);
+        assertEquals(result,"Element found at 1");
+    }
+
+
 }
