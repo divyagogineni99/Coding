@@ -49,4 +49,10 @@ public class CodingController {
         }
     }
 
+    @PostMapping("/questions/stack/binarySearchIterative")
+    public String binarySearchIterative(@RequestParam("array") int[] array,
+                                        @RequestParam("searchElement") int searchElement){
+        return s.binarySearchIterative(array,searchElement);
+    }
+
 }
