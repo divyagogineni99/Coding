@@ -109,5 +109,19 @@ public class CodingTest {
         assertEquals(result,"Element found at 1");
     }
 
+    @Test
+    void binarySearchIterative2(){
+        int[] binaryArray={1, 2, 3, 4, 5, 6};
+        int searchElement= 4;
+        String result = coding.binarySearchIterative(binaryArray,searchElement);
+        assertEquals(result,"Element found at 3");
+    }
+    @Test
+    void binarySearchIterativeNegative(){
+        int[] binaryArray={1, 2, 3, 4, 5, 6};
+        int searchElement= 0;
+        String result = coding.binarySearchIterative(binaryArray,searchElement);
+        assertEquals(result,"Element not found!");
+    }
 
 }
