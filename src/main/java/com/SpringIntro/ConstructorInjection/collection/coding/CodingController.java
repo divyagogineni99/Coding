@@ -51,7 +51,7 @@ public class CodingController {
         }
     }
 
-    @PostMapping("/questions/stack/binarySearchIterative")
+    @GetMapping("/questions/stack/binarySearchIterative")
     public String binarySearchIterative(@RequestParam("array") int[] array,
                                         @RequestParam("searchElement") int searchElement){
         return s.binarySearchIterative(array,searchElement);
@@ -60,6 +60,11 @@ public class CodingController {
     @GetMapping("/questions/stack/printRecursion")
     public String printNumbersTailRecursive(){
        return s.printNumbersTailRecursive(10);
+    }
+
+    @GetMapping("/questions/stack/stringReverse_Recursion")
+    public String stringReverse_Recursion(@RequestParam("str") String str){
+        return s.stringReverse_Recursion(str);
     }
 
 
