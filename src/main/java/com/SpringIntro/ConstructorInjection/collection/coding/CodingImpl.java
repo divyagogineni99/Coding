@@ -26,6 +26,18 @@ public class CodingImpl implements Coding {
     }
 
     @Override
+    public String printNumbersTailRecursive(int n) {
+        return printRecursive(10);
+    }
+
+    public String printRecursive(int n) {
+        if(n == 1)
+            return "1";
+        String returned = printRecursive(n-1);
+        return returned +" "+n;
+    }
+
+    @Override
     public String binarySearchIterative(int[] array, int searchElement) {
         //sortArrayUsingStack(array);
         int low=0;
@@ -40,7 +52,7 @@ public class CodingImpl implements Coding {
                 low=mid+1;
             }
         }
-        return " ";
+        return "Element not found!";
     }
 
 

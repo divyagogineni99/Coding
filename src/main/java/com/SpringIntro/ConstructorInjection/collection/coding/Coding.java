@@ -12,4 +12,7 @@ public interface Coding {
 
 
     String binarySearchIterative(int[] array, int searchElement);
+
+    String printNumbersTailRecursive(int i);
+
 }

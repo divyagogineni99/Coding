@@ -1,5 +1,7 @@
 package com.SpringIntro.ConstructorInjection.collection.coding;
 
+import com.SpringIntro.ConstructorInjection.collection.Stack.StackImpl;
+import com.SpringIntro.ConstructorInjection.collection.Stack.StackUsingQueueImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -53,6 +55,11 @@ public class CodingController {
     public String binarySearchIterative(@RequestParam("array") int[] array,
                                         @RequestParam("searchElement") int searchElement){
         return s.binarySearchIterative(array,searchElement);
+    }
+
+    @GetMapping("/questions/stack/printRecursion")
+    public String printNumbersTailRecursive(){
+       return s.printNumbersTailRecursive(10);
     }
 
 
