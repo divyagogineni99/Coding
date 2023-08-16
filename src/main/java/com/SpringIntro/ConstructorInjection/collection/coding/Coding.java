@@ -15,4 +15,6 @@ public interface Coding {
 
     String printNumbersTailRecursive(int i);
 
+    String stringReverse_Recursion(String str);
+
 }

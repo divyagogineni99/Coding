@@ -25,6 +25,18 @@ public class CodingImpl implements Coding {
         braceStack=brace;
     }
 
+
+    @Override
+    public String stringReverse_Recursion(String str){
+        if(str == null){
+            return null;
+        }
+        if(str.length()==1){
+            return str;
+        }
+       return stringReverse_Recursion(str.substring(1)) + str.charAt(0);
+    }
+
     @Override
     public String printNumbersTailRecursive(int n) {
         return printRecursive(10);
