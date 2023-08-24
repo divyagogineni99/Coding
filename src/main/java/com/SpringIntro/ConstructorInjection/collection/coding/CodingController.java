@@ -51,21 +51,66 @@ public class CodingController {
         }
     }
 
-    @GetMapping("/questions/stack/binarySearchIterative")
+    @GetMapping("/questions/binarySearchIterative")
     public String binarySearchIterative(@RequestParam("array") int[] array,
                                         @RequestParam("searchElement") int searchElement){
         return s.binarySearchIterative(array,searchElement);
     }
 
-    @GetMapping("/questions/stack/printRecursion")
+    @GetMapping("/questions/printRecursion")
     public String printNumbersTailRecursive(){
        return s.printNumbersTailRecursive(10);
     }
 
-    @GetMapping("/questions/stack/stringReverse_Recursion")
+    @GetMapping("/questions/stringReverse_Recursion")
     public String stringReverse_Recursion(@RequestParam("str") String str){
         return s.stringReverse_Recursion(str);
     }
 
+    @GetMapping("/questions/stringBracesAndDotesRecursion")
+    public String stringBracesAndDotesRecursion(@RequestParam("str") String str){
+        return s.stringBracesAndDotesRecursion(str);
+    }
+
+
+    @GetMapping("/questions/sumOfNumbers")
+    public int sumOfNumbers(@RequestParam("n") int n){
+        return s.sumOfNumbers(n);
+    }
+
+    @GetMapping("/questions/factorial")
+    public int factorial(@RequestParam("n") int n){
+        return s.factorial(n);
+    }
+
+    @GetMapping("/questions/palindrome")
+    public String palindrome(@RequestParam("input") String input){
+        return s.palindrome(input);
+    }
+
+    @GetMapping("/questions/fibonocii")
+    public long fibonocii(@RequestParam("n") int n){
+        long before = System.currentTimeMillis();
+        long result=s.fibonocii(n);
+        long after = System.currentTimeMillis();
+        System.out.println(after - before);
+        return result;
+    }
+
+    @GetMapping("/questions/fibnonociiHashing")
+    public int fibnonociiHashing(@RequestParam("n") int n){
+        long before = System.currentTimeMillis();
+        int result = s.fibnonociiHashing(n);
+        long after = System.currentTimeMillis();
+        System.out.println("Hashing "+ (after - before));
+        return result;
+    }
+
+
+    @GetMapping("/questions/binarySearchRecursionMethod")
+    public String binarySearchRecursionMethod(@RequestParam("array") int[] array,
+                                        @RequestParam("searchElement") int searchElement){
+        return s.binarySearchRecursionMethod(array,searchElement);
+    }
 
 }
